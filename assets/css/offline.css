@@ -1,0 +1,145 @@
+html {
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+body {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(0,0,0);
+}
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+h3 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.social-media{
+    display: grid;
+    width: 100%;
+    grid-template-areas:    "logo logo logo"
+                            "header header header"
+                            "content content content"
+                            "footer footer footer";
+    grid-template-columns: minmax(10%, auto) 1fr minmax(10%, auto);
+    grid-template-rows: minmax(200px, auto) minmax(300px, auto) minmax(100px, auto) minmax(300px, auto);
+    gap: 10px 5px;
+    align-items: center;
+}
+.logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center;
+}
+.header {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}
+.element {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: stretch;
+    align-self: center;
+}
+.footer {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    justify-self: center;
+    align-self: end;
+    color: rgb(255, 255, 255);
+}
+ul {
+    position: relative;
+    width: 450px;
+    margin: 100px auto 0;
+/*     padding: 10px 20px; */
+    box-sizing: border-box;
+}
+ul li{
+    display: flex;
+    padding: 15px 20px;
+    margin: 5px 0;
+    transition: .5s;
+}
+ul li span {
+    width: 600px;
+}
+ul li span:hover{
+    transform: scale(1.4);
+}
+ul li span i{
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+/* ul li span:nth-child(1){
+    width: 30px;
+}
+ul li span:nth-child(2){
+    width: 30px;
+} */
+
+/* Responsividad para dispositivos con pantalla <= 768px */
+@media (max-width: 768px) {
+#logo-top{
+    width: 200px;
+    height: auto;
+}
+.icon {
+    color: rgb(255, 255, 255);
+    width: 50px;
+}
+h1 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 20px;
+}
+p {
+    font-size: 20px;
+}
+ul {
+    position: relative;
+    width: 100%;
+    margin: auto auto auto;
+/*     padding: 10px 20px; */
+    box-sizing: border-box;
+}
+ul li{
+    display: flex;
+    padding: 5px 5px;
+    margin: 5px 0;
+    transition: .5s;
+}
+ul li span {
+    width: 25px;
+    padding: 10px 20px;
+}
+ul li span:hover{
+    transform: scale(1.8);
+}
+ul li span i{
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+}
+
+@media (min-width: 769px) {
+    #logo-top{
+        width: 300px;
+        height: auto;
+    }
+    h1 {
+        font-size: 70px;
+    }
+    h3 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
